@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'app/variables';
+@import '~@angular/material/theming';
+
+html, body {
+    min-height: 100%;
+    height: auto;
+    margin: 0;
+}
+body {
+    background: url('/assets/images/fondos/fondo1.png');
+    background-size: cover;
+    max-width: 100%;
+}
+
+app-root {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    display: block;
+}
+
+// Tipografia
+$custom-typography: mat-typography-config(
+  $font-family: 'PT Sans, sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+$my-app-warn:    mat-palette($mat-deep-orange);
+$theme-app-primary: mat-palette($mat-grey);
+$theme-app-accent:  mat-palette($mat-grey, 700);
+// The warn palette is optional (defaults to red).
+$theme-app-warn:    mat-palette($mat-red);
+$theme-app-theme: mat-light-theme($theme-app-primary, $theme-app-accent, $theme-app-warn);
+
+@include angular-material-theme($theme-app-theme);
+@include mat-core($custom-typography);
+// @include mat-base-typography($custom-typography);
+
+// // Override typography for a specific Angular Material components.
+// @include mat-checkbox-typography($custom-typography);
+
+// // Override typography for all Angular Material, including mat-base-typography and all components.
+// @include angular-material-typography($custom-typography);
+
+.theme-ancaor {
+    $alternate-primary: mat-palette($mat-red, 700);
+    $alternate-accent:  mat-palette($mat-pink, A200);
+    $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+    @include angular-material-theme($alternate-theme);
+    @include mat-core-theme($alternate-theme);
+    @include mat-button-theme($alternate-theme);
+    @include mat-checkbox-theme($alternate-theme);
+    @include mat-select-theme($alternate-theme);
+    @include mat-datepicker-theme($alternate-theme);
+}
