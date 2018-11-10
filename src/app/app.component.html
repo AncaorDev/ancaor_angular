@@ -1,3 +1,5 @@
 
-<ancaor-cabecera></ancaor-cabecera>
-<router-outlet></router-outlet>
+<div class="loading theme-ancaor center" id="div-loading" [ngClass]="{'opacity' : !loading}">
+  <mat-progress-spinner [mode]="mode" [color]="color" [value]="value"></mat-progress-spinner>
+</div>
+<app-ancaor [ngClass]="{'display-none' : loading , 'app' : !loading}"></app-ancaor>

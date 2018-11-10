@@ -1,0 +1,138 @@
+@import './../../variables.scss';
+$size   : 20vw;
+$size2  : 2vw;
+
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    content: "";
+}
+
+@mixin abCenter($size){
+    position: absolute;
+    top:calc(50% - #{$size * 0.5});
+    left:calc(50% - #{$size * 0.5});
+}
+
+@mixin abCenterTop($size){
+    position: absolute;
+    top:calc(50% - #{$size * 0.5});
+}
+
+.ancaor {
+    img{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: white;
+        animation: imgAnimation 1s  linear;
+    }
+    @include abCenter($size);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    &__isotipo {
+        @include circle($size);
+        background: $primary;
+        margin: auto;
+        position: relative;
+        &::after {
+            @include circle($size * 0.9);
+            background: $secundary;
+            @include abCenter($size * 0.9);
+            animation: opacityAnimation 1s  linear;
+        }
+    }
+
+    &__text {
+        top: 0;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        p {
+            color: white;
+            font-weight: 700;
+            font-size: 21px;
+        }
+    }
+    &__diamond {
+        width: 0;
+        height: 0;
+        border-right: 1vw solid transparent;
+        border-top: $size2 solid transparent;
+        border-left: 1vw solid transparent;
+        border-bottom: $size2 solid $primary;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        &::after {
+            content: '';
+            position: absolute;
+            left: -1vw;
+            right: 0;
+            margin: auto;
+            top: $size2;
+            width: 0;
+            height: 0;
+            border-top: 1.5vw solid #d32f2f;
+            border-right: 1vw solid transparent;
+            border-left: 1vw solid transparent;
+        }
+    }
+
+    &__left {
+        height: 10px;
+    }
+}
+
+// @keyframes mostrar {
+//     0% {
+//         @include abCenterTop($size*5);
+//     }
+//     50% {
+//         @include abCenterTop($size*3);
+//     }
+//     100% {
+//         @include abCenter($size * 0.9);
+//     }
+// }
+
+@keyframes imgAnimation{
+    0% {
+        width: 10%;
+     }
+     50% {
+        width: 50%;
+     }
+     100% {
+        width: 100%;
+     }
+}
+
+// #diamond-narrow {
+//     width: 0;
+//     height: 0;
+//     border: 50px solid transparent;
+//     border-bottom: 70px solid red;
+//     position: relative;
+//     top: -50px;
+//   }
+//   #diamond-narrow:after {
+//     content: '';
+//     position: absolute;
+//     left: -50px;
+//     top: 70px;
+//     width: 0;
+//     height: 0;
+//     border: 50px solid transparent;
+//     border-top: 70px solid red;
+//   }

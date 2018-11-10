@@ -1,0 +1,17 @@
+@import './../../../variables.scss';
+
+.footer {
+    background-color: $secundary;
+}
+.sub-footer {
+    height: 10px;
+}
+.footer-principal{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}

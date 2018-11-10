@@ -1,0 +1,135 @@
+@import './../../../variables.scss';
+
+.header-principal {
+    background-color: $red-ancaor;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.t-ancaor{
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    animation-duration: 1.5s;
+    animation-name: toolbar;
+    transition: 4s;
+    top:0;
+    z-index: 3;
+}
+
+.shadow {
+    transition: 0.5s;
+    box-shadow: -1px 5px 3px -3px rgba(0,0,0,0.7);
+}
+
+@keyframes toolbar {
+    0% {
+        margin-top: -100%;
+    }
+    30% {
+        margin-top: -0%;
+    }
+    50% {
+        margin-top: 1%;
+    }
+    60% {
+        margin-top: 0%;
+    }
+    70% {
+        margin-top: 0.5%;
+    }
+    80% {
+        margin-top: 0%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+/*
+======== FONDO ANIMACIONES=========
+*/
+
+.animate-left {
+    animation-duration: 1s;
+    animation-name: slideleft;
+}
+
+.animate-right {
+    animation-duration: 1s;
+    animation-name: slideright;
+}
+
+.animate-bottom {
+    animation-duration: 1s;
+    animation-name: slide_bottom;
+}
+
+.show-left {
+    animation-duration: 1s;
+    animation-name: showleft;
+}
+
+@keyframes slideleft {
+    from {
+        margin-left: 40%;
+        width: 100%
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes slideright {
+    from {
+        margin-left: -40%;
+        width: 100%
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+}
+}
+
+@keyframes showleft {
+    from {
+        margin-left: -40%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide_bottom {
+    from {
+        margin-bottom: 100%;
+        /*width: 100%*/
+    }
+    to {
+        margin-bottom: 0%;
+        /*width: 100%;*/
+    }
+}
+
+  /*
+  ======== FIN - ANIMACIONES =========
+  */
+
+.class-icon {
+    width: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.icon-a{
+    display: flex;
+}
