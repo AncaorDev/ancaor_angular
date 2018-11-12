@@ -11,7 +11,6 @@ export class AncaorFooter {
 
     }
     ngOnInit() {
-        console.log('footer');
 
     }
 }

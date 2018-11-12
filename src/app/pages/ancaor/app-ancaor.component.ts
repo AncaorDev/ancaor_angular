@@ -13,14 +13,12 @@ export class AppAncaor {
 
     }
     ngOnInit() {
-        console.log('ancaor');
-
     }
 
     ngAfterViewInit():void {
 
     }
     onScrollTop(event){
-        console.log(event);
+
     }
 }

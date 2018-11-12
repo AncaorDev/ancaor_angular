@@ -17,18 +17,16 @@ export class AncaorInicio {
     }
     ngOnInit() {
         this.logo = document.getElementById('logo-ancaor');
-        console.log('inicio');
-
     }
     @HostListener("window:scroll", ['$event'])
     onWindowScroll($event:Event) {
         if(!this.logo_const) {
             this.logo_const = this.logo.offsetTop
         }
-        let scrollOffset = $event.srcElement.children[0].scrollTop;
+        var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        // let scrollOffset = $event.srcElement.children[0].scrollTop;
         // console.log(logo.clientHeight + logo.offsetTop);
-        console.log(this.logo_const);
-        if(scrollOffset > this.logo_const){
+        if(scrollTop > this.logo_const){
             this.top = true;
         } else {
             this.top = false;

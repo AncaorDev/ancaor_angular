@@ -1,8 +1,13 @@
 @import './../../variables.scss';
-$size   : 20vw;
-$size2  : 2vw;
-$size3  : 5vw;
-$size4  : 2vw;
+
+$size   : 10vw;
+$size2  : 1vw;
+$size3  : 2.5vw;
+$size4  : 1vw;
+
+$sizemov  : $size * 4;
+$sizemov2 : $size2 * 4;
+$sizemov3 : $size3 * 4;
 $absolute : absolute;
 $relative : relative;
 $fixed    : fixed;
@@ -36,7 +41,6 @@ $fixed    : fixed;
 }
 
 .ancaor {
-
     z-index: 3;
     img{
         position: absolute;
@@ -47,19 +51,34 @@ $fixed    : fixed;
         color: white;
         animation: imgAnimation 1s  linear;
     }
+
     @include abCenter($size, $absolute);
+
+    @media (max-width: 400px) {
+        @include abCenter($sizemov, $absolute);
+    }
+
     display: flex;
     margin: auto;
     align-items: center;
     &__isotipo {
         @include circle($size);
+        @media (max-width: 400px) {
+            @include circle($sizemov);
+        }
         background: $primary;
         margin: auto;
         position: relative;
         &::after {
             @include circle($size * 0.9);
+            @media (max-width: 400px) {
+                @include circle($sizemov * 0.9);
+            }
             background: $secundary;
             @include abCenter($size * 0.9, $absolute);
+            @media (max-width: 400px) {
+                @include abCenter($sizemov * 0.9, $absolute);
+            }
             animation: opacityAnimation 1s  linear;
         }
     }
@@ -128,6 +147,9 @@ $fixed    : fixed;
     align-items: center;
     &__isotipo {
         @include circle($size3);
+        @media (max-width: 400px) {
+            @include circle($sizemov3);
+        }
         background: $primary;
         margin: auto;
         position: relative;
@@ -260,15 +282,20 @@ $fixed    : fixed;
             .title {
                 color :white;
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 10%;
             }
         }
     }
 }
 
 .scale{
-    transition: transform 0.2s linear;
-    transform: scale(0.22);
+    transition: transform .4s linear;
+    transform: scale(0.45);
     position: fixed;
-    top: -120px;
+    top: 0;
+    transform-origin:top;
+}
+
+.comming {
+    margin-top: 10% !important;
 }
