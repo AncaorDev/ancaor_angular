@@ -33,6 +33,7 @@ export class AppComponent {
             }
         }, 40);
     }
+
     myEndFunction(){
         this.div_loading = document.getElementsByClassName("opacity");
         if(this.div_loading.length > 0) {
