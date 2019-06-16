@@ -1,18 +1,9 @@
 section.theme-ancaor.height-100(id="inicio-ancaor")
-    .contenido
-        .row
-            h3.title.comming Comming the 2019
-    #logo-ancaor([ngClass]="{ 'scale' : top , 'ancaor' : true }")
-        div([ngClass]="{ 'ancaor__isotipo' : true }")
-        //- .ancaor__diamond
-        //- .ancaor__left
-        //- .ancaor__righ
-        img.logo(src="./assets/images/svg/ancaor_isotipo.svg", alt="ancaor")
-section.theme-ancaor.height-100(id="project-ancaor")
-    .contenido
-        .row
-            h3.title Mis proyectos
-section.theme-ancaor.height-100(id="art-ancaor")
-    .contenido
-        .row
-            h3.title Art by Lykrune
+    .contenido-inicio
+        .row1
+            .circle.circle_about Sobre mí
+            .circle.circle_project Proyectos
+        .row2
+            .images
+                teclado-svg.teclado(width="200px")
+                web-svg.web(width="300px")

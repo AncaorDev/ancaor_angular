@@ -1,6 +1,19 @@
-.theme-ancaor.fixed(id="header")
+.theme-ancaor.fixed.f-center(id="header")
+    .ancaor_logo
+        img.ancaor_logo-img(src="./assets/images/svg/ancaor.svg", alt="ancaor")
+        span.c-white.m-auto.t-ancaor.ancaor_logo-text Ancaor
+    svg(version="1.1", width="50vw", height="30vh", viewBox="0 0 400 210")
+        defs
+            filter(id="shadow")
+                feGaussianBlur(in="SourceAlpha" stdDeviation="3")
+                feOffset(dx="2" dy="2" result="offsetblur")
+                feComponentTransfer
+                    feFuncA(type="linear" slope="1")
+                feMerge
+                    feMergeNode
+                    feMergeNode(in="SourceGraphic")
+        circle.circle-cabecera(cx="200" cy="-100" r="300",style="filter:url(#shadow)")
     .header-principal
-        p.c-white.m-auto.t-ancaor Ancaor
         .spacer
         a.icon-a(href="https://github.com/AncaorDev", target="_blank")
             img.class-icon.class-github(src="./assets/images/svg/github_icon3.svg", alt="gh")
@@ -8,5 +21,3 @@
             img.class-icon.class-fb(src="./assets/images/svg/fb_icon.svg", alt="fb")
         a.icon-a
             img.class-icon.class-fb( mat-button, src="./assets/images/svg/twitter_icon.svg", alt="tw")
-        button.c-white(mat-icon-button, mat-button, (click)="enviar()")
-            mat-icon home

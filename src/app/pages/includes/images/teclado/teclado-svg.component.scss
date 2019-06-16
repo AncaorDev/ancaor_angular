@@ -1,0 +1,50 @@
+.fil1{
+    fill:#2B3B4E
+}
+
+.fil0{
+    fill:#314457
+}
+
+.fil2{
+    fill:#324A5E
+}
+
+.fil3{
+    fill:#ACB3BA
+}
+
+.fil5 {
+    fill:#ACB3BA;
+    animation: ufo-big 2s ease infinite;
+}
+
+.space {
+    animation: space-pres 6s ease infinite;
+}
+@keyframes ufo-big {
+    0%        {opacity: 0.4}
+    15%, 70%  {opacity: 0.8}
+    85%, 100% {opacity: 0.4}
+}
+
+@keyframes space-pres {
+    0%        {
+        opacity: 0.8
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.8
+    }
+    80% {
+        opacity: 0.8
+    }
+    90% {
+        opacity: 0.1
+    }
+    100% {
+        opacity: 0.8
+    }
+}

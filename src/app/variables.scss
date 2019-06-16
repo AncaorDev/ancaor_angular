@@ -68,8 +68,11 @@ $black2: #424242;
 
 $red-ancaor: #d32f2f;
 $primary :#d32f2f;
-$secundary : #314457;
+// $secundary : #314457;
 
+
+$backgroud: #313131;
+$secundary: #7D7777;
 $font-family: 'PT Sans, sans-serif';
 
 .spacer {
@@ -92,6 +95,12 @@ $font-family: 'PT Sans, sans-serif';
 }
 .display-none{
     display: none;
+}
+
+.f-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes opacityAnimation {

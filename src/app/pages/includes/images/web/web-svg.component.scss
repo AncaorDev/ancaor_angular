@@ -1,0 +1,140 @@
+.contenedor {
+    fill:#314457
+}
+.cabecera {
+    animation: popup 5s ease infinite;
+}
+
+.menu {
+    animation: popbottom 5s ease infinite;
+}
+
+.cont-dash {
+    animation: bottomdash 5s ease infinite;
+}
+
+.pie {
+    animation: popup  5s ease infinite;
+}
+
+.lines {
+    transform: translateX(-50px);
+    animation: lines  5s ease infinite;
+}
+
+.dash {
+    animation: popbottom 5s ease infinite;
+}
+
+.large {
+    animation: popbottom 5s ease infinite;
+}
+
+.fil1 {fill:#999999}
+.fil2 {fill:#D4CCCC}
+
+
+
+@keyframes popup {
+    0% {
+      transform: translateY(-150px);
+    }
+    5% {
+      transform: translateY(0);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-150px);
+    }
+}
+
+@keyframes popbottom {
+    0% {
+      transform: translateY(450px);
+    }
+    5% {
+      transform: translateY(0);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(450px);
+    }
+}
+
+@keyframes bottomdash {
+    0% {
+        transform: translateY(750px);
+        transform: rotate(-30deg);
+    }
+    5% {
+        transform: translateY(0);
+        // transform: rotate(0);
+    }
+    80% {
+        transform: translateY(0);
+        // transform: rotate(0deg);
+    }
+    90% {
+        transform: translateY(750px);
+        // transform: rotate(0);
+    }
+    100% {
+        transform: translateY(750px);
+        // transform: rotate(0);
+    }
+}
+
+@keyframes lines {
+    0% {
+        transform: translateX(-50px);
+    }
+    10% {
+        transform: translateX(2px);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    70% {
+        transform: translateX(0);
+    }
+    80% {
+        transform: translateX(-50px);
+    }
+    90% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes dash-large {
+    0% {
+        transform: translateY(450px);
+      }
+      5% {
+        transform: translateY(0);
+      }
+      80% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(450px);
+      }
+}

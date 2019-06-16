@@ -1,12 +1,18 @@
 @import './../../../variables.scss';
 
+.circle-cabecera {
+    fill: $secundary;
+}
 .header-principal {
-    background-color: $red-ancaor;
+    // background-color: $red-ancaor;
     display: flex;
     align-items: center;
-    height: 70px;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    height: 60px;
+    // padding-left: 1vw;
+    // padding-right: 1vw;
+    right: 0;
+    top: 0;
+    position: absolute;
 }
 
 .t-ancaor{
@@ -132,4 +138,20 @@
 }
 .icon-a{
     display: flex;
+}
+
+.ancaor_logo {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    &-img {
+        width: 10vw;
+    }
+    &-text {
+        padding-left: 6px;
+        font-size: 2.2vw;
+        color:#314457;
+        font-weight: bolder;
+    }
 }

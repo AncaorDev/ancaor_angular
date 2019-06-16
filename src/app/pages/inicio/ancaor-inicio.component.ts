@@ -20,17 +20,17 @@ export class AncaorInicio {
     }
     @HostListener("window:scroll", ['$event'])
     onWindowScroll($event:Event) {
-        if(!this.logo_const) {
-            this.logo_const = this.logo.offsetTop
-        }
-        var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        // let scrollOffset = $event.srcElement.children[0].scrollTop;
-        // console.log(logo.clientHeight + logo.offsetTop);
-        if(scrollTop > this.logo_const){
-            this.top = true;
-        } else {
-            this.top = false;
-        }
+        // if(!this.logo_const) {
+        //     this.logo_const = this.logo.offsetTop
+        // }
+        // var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        // // let scrollOffset = $event.srcElement.children[0].scrollTop;
+        // // console.log(logo.clientHeight + logo.offsetTop);
+        // if(scrollTop > this.logo_const){
+        //     this.top = true;
+        // } else {
+        //     this.top = false;
+        // }
         // if(logo.offsetTop > scrollOffset) {
         //     logo.classList.add('ancaor-top');
         //     logo.classList.remove('ancaor');

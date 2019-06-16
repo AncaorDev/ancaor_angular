@@ -12,7 +12,8 @@ import { AncaorCabecera } from './pages/includes/header/ancaor-cabecera.componen
 import { AncaorFooter } from './pages/includes/footer/ancaor-footer.component';
 import { AppAncaor } from './pages/ancaor/app-ancaor.component';
 import { AncaorContacto } from './pages/contacto/ancaor-contacto.component';
-
+import { TecladoSvg } from './pages/includes/images/teclado/teclado-svg.component';
+import { WebSvg } from './pages/includes/images/web/web-svg.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -20,7 +21,9 @@ import { AncaorContacto } from './pages/contacto/ancaor-contacto.component';
 		AncaorInicio,
 		AncaorContacto,
 		AncaorCabecera,
-		AncaorFooter
+		AncaorFooter,
+		TecladoSvg,
+		WebSvg
 	],
 	imports: [
 		BrowserModule,

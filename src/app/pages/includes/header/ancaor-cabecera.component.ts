@@ -15,20 +15,20 @@ export class AncaorCabecera {
     }
 
     ngOnInit() {
-        this.observer.observableScroll.subscribe(res => {
-            this.fixed = res;
-        });
-        this.cabecera = document.getElementById("header");
-        // Code for Chrome, Safari and Opera
-        this.cabecera.addEventListener("webkitAnimationEnd", this.myEndFunction);
-        // Standard syntax
-        this.cabecera.addEventListener("animationend", this.myEndFunction);
+        // this.observer.observableScroll.subscribe(res => {
+        //     this.fixed = res;
+        // });
+        // this.cabecera = document.getElementById("header");
+        // // Code for Chrome, Safari and Opera
+        // this.cabecera.addEventListener("webkitAnimationEnd", this.myEndFunction);
+        // // Standard syntax
+        // this.cabecera.addEventListener("animationend", this.myEndFunction);
     }
     enviar(){
 
     }
     myEndFunction(){
-        this.cabecera = document.getElementById("header");
-        this.cabecera.classList.add('shadow');
+        // this.cabecera = document.getElementById("header");
+        // this.cabecera.classList.add('shadow');
     }
 }

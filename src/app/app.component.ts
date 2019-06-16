@@ -13,7 +13,7 @@ export class AppComponent {
     mode:string  = this.modes.determinate;
     color:string = 'primary';
     value:number = 0;
-    loading:boolean = true;
+    loading:boolean = false;
     div_loading;
     interval:any;
     constructor(observer :AncaorInicioObservable){
