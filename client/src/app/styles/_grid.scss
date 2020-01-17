@@ -1,0 +1,66 @@
+// vw-10 to vw-100 in 10 for 10
+$width: 100;
+$in: 10;
+@while $width > 0 {
+    .vw-#{$width} {
+        width: #{$width - 0vw} !important;
+    }  
+    $width: $width - $in;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.xs-25-100 {
+    width: 100%;
+    @media (min-width:'720px') {
+        width: 25%;
+    }
+}
+
+.xs-30-100 {
+    width: 100%;
+    @media (min-width:'720px') {
+        width: 30%;
+    }
+}
+
+.xs-50-100 {
+    width: 100%;
+    @media (min-width:'720px') {
+        width: 50%;
+    }
+}
+.flex {
+    display: flex;
+    &_alig_center {
+        display: flex;
+        align-items: center;
+    }
+    &_just_center {
+        display: flex;
+        justify-content: center;
+    }
+    &_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

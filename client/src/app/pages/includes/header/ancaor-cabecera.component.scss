@@ -1,5 +1,12 @@
 @import './../../../variables.scss';
+@import '../../../styles/mixins';
 
+.logo_svg {
+    width: 100vw;
+    @include breakpoint('sm') {
+        width: 50vw;
+    }
+}
 .circle-cabecera {
     fill: $secundary;
 }
@@ -146,12 +153,18 @@
     position: absolute;
     display: flex;
     &-img {
-        width: 10vw;
+        width: 28vw;
+        @include breakpoint('sm') {
+            width: 8vw;
+        }
     }
     &-text {
         padding-left: 6px;
-        font-size: 2.2vw;
+        font-size: 5.2vw;
         color:#314457;
         font-weight: bolder;
+        @include breakpoint('sm') {
+            font-size: 2.2vw;
+        }
     }
 }

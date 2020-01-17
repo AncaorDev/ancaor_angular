@@ -1,0 +1,88 @@
+.txt-center {
+    text-align: center;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.m-auto {
+    margin: auto !important;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.c-white {
+    color: #FFF;
+}
+.b-white {
+    color: #FFF;
+}
+.display-none{
+    display: none !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.just-cont-center {
+    justify-content: center;
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+// vw-10 to vw-100 in 10 for 10
+$padding: 10;
+$in: 1;
+@while $padding > -1 {
+    .p-#{$padding}-vw {
+        padding: #{$padding - 0vw} !important;
+    }
+    .p-#{$padding}-px {
+        padding: #{$padding - 0px} !important;
+    }
+    .p-l-#{$padding}-vw {
+        padding-left: #{$padding - 0vw} !important;
+    }
+    .p-l-#{$padding}-px {
+        padding-left: #{$padding - 0px} !important;
+    }
+    .p-r-#{$padding}-vw {
+        padding-right: #{$padding - 0vw} !important;
+    }
+    .p-r-#{$padding}-px {
+        padding-right: #{$padding - 0px} !important;
+    }
+    .p-t-#{$padding}-vw {
+        padding-top: #{$padding - 0vw} !important;
+    }
+    .p-t-#{$padding}-px {
+        padding-top: #{$padding - 0px} !important;
+    }
+    .p-b-#{$padding}-vw {
+        padding-bottom: #{$padding - 0vw} !important;
+    }
+    .p-b-#{$padding}-px {
+        padding-bottom: #{$padding - 0px} !important;
+    }
+
+    .m-#{$padding}-vw {
+        margin: #{$padding - 0vw} !important;
+    }
+    .m-#{$padding}-px {
+        margin: #{$padding - 0px} !important;
+    }
+    $padding: $padding - $in;
+}
+
+.b-white {
+    background: #fff;
+}
+.weight-600 {
+    font-weight: 600 !important;
+}
